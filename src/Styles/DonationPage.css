@@ -1,0 +1,122 @@
+.header{
+    margin-top: 120px;
+    padding: 20px;
+    background: url('../images/header.webp');
+    margin-bottom: 40px;
+}
+
+.Donation-Section{
+    padding: 20px;
+}
+
+.Donation-Section .hero{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+h3{
+    padding: 10px;
+}
+.Donation-Section .Pos{
+    display: flex;
+    gap: 20px;
+}
+.Donation-Section .Pos .locT{
+    display: flex;
+    flex-direction: column;
+}
+.Donation-Section .donation-information{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 20px;
+}
+
+
+.date{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+input{
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+select{
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+option{
+    padding: 5px 10px; /* Add padding around option text */
+    border: 1px solid #ccc; /* Add a border */
+}
+
+@media (max-width: 767px) {
+    .header {
+      margin-top: 80px;
+    }
+  
+    .Donation-Section {
+      padding: 10px;
+    }
+  
+    .Donation-Section .hero {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    h3 {
+      padding: 5px;
+    }
+  
+    .Donation-Section .Pos {
+      flex-direction: column;
+    }
+  
+    .Donation-Section .donation-information {
+      width: 100%;
+    }
+  
+    
+    .date {
+      padding: 10px;
+    }
+  
+    input,
+    select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid black;
+    }
+  
+    option {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+    }
+
+    .rdrDateRangePickerWrapper{
+        /* Adjust styles for mobile */
+        width: 100%; /* Make the component full width */
+        max-width: 350px; /* Set a maximum width to prevent overflow */
+        overflow-x: scroll;
+      }
+    
+      .rdrDateDisplayItem {
+        /* Adjust font size or other styles for better readability */
+        font-size: 14px;
+      }
+    
+      .rdrMonths,
+      .rdrWeekDays,
+      .rdrDays {
+        /* Adjust flex properties or margins for better layout */
+        flex-wrap: wrap; /* Wrap elements on smaller screens */
+      }
+  }

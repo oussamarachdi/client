@@ -1,0 +1,10 @@
+@import url("~leaflet/dist/leaflet.css");
+
+.leaflet-container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    height: 450px;
+    border-radius: 40px;
+}

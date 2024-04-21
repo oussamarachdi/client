@@ -1,0 +1,55 @@
+.banner {
+    background-image: url('../images/banner.avif');
+    background-size: cover;
+    object-fit: contain;
+    position: static;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    height: 500px; /* Use viewport height for full-screen effect */
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Media queries for responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-title,
+    .sub-hero-title,
+    .Donate-btn {
+      position: static; /* Remove fixed positioning on smaller screens */
+      padding: 0.5rem; /* Add some padding for aesthetics */
+      text-align: center; /* Center text on smaller screens */
+    }
+  
+    .hero-title,
+    .sub-hero-title {
+      margin-top: 0rem; /* Add margin between titles */
+    }
+  }
+  
+  .hero-title {
+    font-size: 2rem; /* Adjust font size for larger screens (optional) */
+    color: #000; /* Assuming you want white text over the banner */
+  }
+  
+  .sub-hero-title {
+    font-size: 1.5rem; /* Adjust font size for larger screens (optional) */
+    color: #000; /* Assuming you want white text over the banner */
+  }
+  
+  .Donate-btn {
+    background-color: #2196f3; /* Example button color */
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer; /* Indicate clickable button */
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
