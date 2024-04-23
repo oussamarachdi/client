@@ -1,0 +1,41 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+/* Container for about us content */
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  margin: 0 auto; /* Center content horizontally and vertically */
+  width: 80%; /* Adjust width as needed for different breakpoints */
+  gap: 50px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-us-content {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+/* Mission Text Styles */
+.mission-text .fr,
+.mission-text .ar {
+  font-size: 1.25rem; /* Use rem units for better responsiveness */
+}
+
+/* Map Container Styles */
+.map-container iframe {
+  border-radius: 50px;
+  width: 90vw;
+  margin: 50px 0; /* Adjust margin as needed for different breakpoints */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .map-container iframe {
+    margin: 25px 0; /* Adjust margin for smaller screens */
+    width: 94vw;
+  }
+}

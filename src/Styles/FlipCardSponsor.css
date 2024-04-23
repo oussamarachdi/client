@@ -13,6 +13,9 @@
 .card {
     margin:  3rem;
     perspective: 1000px;
+    box-shadow: 0px 0px 43px 1px rgba(0,0,0,0.73);
+    -webkit-box-shadow: 0px 0px 43px 1px rgba(0,0,0,0.73);
+    -moz-box-shadow: 0px 0px 43px 1px rgba(0,0,0,0.73);
 }
 .card-front{
     grid-area: 1 / 1;
@@ -40,5 +43,4 @@
 .card-container .card-front img{
     width: 200px;
     height: 200px;
-    border-radius: 50%;
 }

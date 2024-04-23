@@ -12,24 +12,28 @@ const DragDropImageUploader = ({onImageChange}) => {
 
     const onFileSelect = (event) => {
         const files = event.target.files;
-        if(files.length == 0) return;
+        const newImages = [];
+        if(files.length === 0) return;
         for (let i=0; i<files.length; i++){
             if(files[i].type.split('/')[0] !== 'image') continue;
-            if(!images.some((e) => e.name == files[i].name)){
+            const existingImage = images.some((e) => e.name === files[i].name);
+            if(!existingImage){
                 files[i]['url'] = URL.createObjectURL(files[i]);
-                setImages((prevImages) => [
-                    ...prevImages,files[i]
-                ])
+                newImages.push(files[i])
+                setImages((prevImages) => ([...prevImages, files[i]]))
             }
         
         }
-        onImageChange(images);
+        onImageChange(newImages);
     }
 
     function deleteImage(index){
-        setImages((prevImages) =>
-            prevImages.filter((_,i) => i !== index)
+        const newImages = images.filter((_,i) => i !== index)
+        setImages(
+            newImages
         )
+
+        onImageChange(newImages);
     }
 
     function onDragOver (event){
@@ -43,18 +47,17 @@ const DragDropImageUploader = ({onImageChange}) => {
     }
     function onDrop(event){
         event.preventDefault();
+        const newImages = []
         setIsDragging(false);
         const files = event.dataTransfer.files;
         for (let i=0; i<files.length; i++){
             if(files[i].type.split('/')[0] !== 'image') continue;
-            if(!images.some((e) => e.name == files[i].name)){
+            if(!images.some((e) => e.name === files[i].name)){
                 files[i]['url'] = URL.createObjectURL(files[i])
-                setImages((prevImages) => [
-                    ...prevImages,files[i]
-                ])
+                newImages.push(files[i])
+                setImages((prevImages) => ([...prevImages, files[i]]))
             }
         }
-
         onImageChange(images)
 
 
@@ -97,9 +100,6 @@ const DragDropImageUploader = ({onImageChange}) => {
             
             
         </div>
-        <button type='button'>
-            Upload
-        </button>
     </div>
   )
 }

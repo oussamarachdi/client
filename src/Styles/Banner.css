@@ -1,32 +1,57 @@
 .banner {
-    background-image: url('../images/banner.avif');
-    background-size: cover;
-    object-fit: contain;
-    position: static;
-    top: 0;
-    left: 0;
-    margin: 0;
-    width: 100vw;
-    height: 500px; /* Use viewport height for full-screen effect */
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: relative; /* Enable relative positioning for the container */
+  width: 100vw;
+  height: 500px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Make the pseudo-element absolute within the container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/banner.jpg');
+  background-size:cover;
+  background-position: center; /* Center the image horizontally and vertically */
+  object-fit: cover; /* Ensure the entire container is covered (adjust if needed) */
+  filter: blur(3px); /* Apply blur effect with a strength of 5px (adjust as needed) */
+  z-index: -2; /* Place the pseudo-element behind the content */
+}
+
+.banner .hero-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .hero-section h1{
+  color: white;
+}
+.banner .hero-section h3{
+  color: white;
+}
+
+/* Your content within the .banner class */
   
   /* Media queries for responsive adjustments */
   @media (max-width: 768px) {
     .hero-title,
     .sub-hero-title,
     .Donate-btn {
-      position: static; /* Remove fixed positioning on smaller screens */
-      padding: 0.5rem; /* Add some padding for aesthetics */
-      text-align: center; /* Center text on smaller screens */
+      position: static; 
+      padding: 0.5rem; 
+      text-align: center; 
     }
   
     .hero-title,
     .sub-hero-title {
-      margin-top: 0rem; /* Add margin between titles */
+      margin-top: 0rem; 
     }
   }
   

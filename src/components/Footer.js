@@ -5,17 +5,7 @@ import logo from '../images/logo.jpg'
 const Footer = () => {
   return (
     <div className='footer'>
-        <section className='contact-us'>
-            <h1>Contact Us</h1>
-            <p>Send us a message</p>
-            <form className='formulaire'>
-                <input type='text' placeholder='Full Name'/>
-                <input type='text' placeholder='Your email'/>
-                <textarea type='text' placeholder='Your Message'></textarea>
 
-                <input type='submit' value="Envoyer" className='btn-submit'/>
-            </form>
-        </section>
         <section className='site-map'>
             <h1>Site Map</h1>
             <p>All our pages Below</p>
